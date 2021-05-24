@@ -32,6 +32,8 @@ body::after {
   bottom: 0;
   width: 100%;
   height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -91,6 +93,28 @@ h1 {
   margin: 0;
 }
 
+#audio {
+  opacity: 0.2;
+  position: absolute;
+  bottom: 220px;
+  width: 250px;
+  height: 20px;
+}
+#play,
+#pause {
+  position: absolute;
+  opacity: 0.2;
+  top: 40px;
+  width: 40px;
+  height: 40px;
+  display: none;
+}
+
+#play.active,
+#pause.active {
+  display: block;
+}
+
 @media (max-width: 500px) {
   h1 {
     font-size: 45px;
@@ -107,5 +131,15 @@ h1 {
 
   .time small {
     font-size: 10px;
+  }
+  #copyright {
+    font-size: 28px;
+    opacity: 0.5;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    z-index: 400;
+    padding: 0;
+    margin: 0;
   }
 }
